@@ -1,0 +1,77 @@
+html, body {
+    margin: 0;
+    padding-top: 50px;
+}
+
+.main {
+    position: relative;
+}
+
+.container {
+    margin: 0 auto;
+    width: 293px;
+    height: 220px;
+}
+
+.content {
+    width: 293px;
+}
+
+.content img {
+    display: none;
+}
+
+#visible {
+    display: inline-block;
+}
+
+.scroll-turn {
+    position: absolute;
+    left: 45.5%;
+    list-style: none;
+}
+
+.turn {
+    display: inline-block;
+    opacity: 0.8;
+    background: red;
+    border: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.turn:hover {
+    background: grey
+}
+
+.turn-active {
+    background: grey
+}
+
+#prev {
+    position: absolute;
+    top: 83px;
+    left: 655px;
+    background: url(./images/prev.png) no-repeat;
+  }
+
+#prev:hover, #next:hover {
+    background-color: grey;
+    opacity: .8;
+}
+
+#next {
+    position: absolute;
+    top: 83px;
+    left: 916px;
+    background: url(./images/next.png) no-repeat;
+  }
+
+#prev, #next {
+  background-size: 138%;
+  cursor: pointer;
+  width: 2%;
+  height: 20%;
+}
