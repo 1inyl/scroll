@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>adsf</title>
+
+</head>
+<body>
+  <div class="main">
+    <div class="container" style="width:293px;height:220px;overflow: hidden;">
+      <div class="content" style="width:1500px;">
+          <img src="./images/1.jpg" alt="1" />
+          <img src="./images/2.jpg" alt="2" />
+          <img src="./images/3.jpg" alt="3" />
+          <img src="./images/4.jpg" alt="4" />
+          <img src="./images/5.jpg" alt="5" />
+    </div>
+    <div class="none-content"></div>
+    </div>
+    <div class="scroll-turn">
+      <button class="turn"></button>
+      <button class="turn"></button>
+      <button class="turn"></button>
+      <button class="turn"></button>
+      <button class="turn"></button>
+    </div>
+
+  </div><script type="text/javascript">
+var speed = 3;
+var scroll = document.querySelector(".content");
+var scroll1 = document.querySelector(".none-content");
+var container = document.querySelector(".container");
+
+scroll1.innerHTML = scroll.innerHTML;
+function Marquee1() {
+
+    if (scroll1.offsetLeft + container.scrollLeft <= 0) {
+        container.scrollLeft += scroll.offsetWidth;
+        console.log(container.scrollLeft);
+    } else {
+        container.scrollLeft++
+        console.log(container.scrollLeft);
+    }
+}
+
+var MyMar1 = setInterval(Marquee1, speed)
+
+container.onmouseover = function() {
+    clearInterval(MyMar1)
+}
+
+container.onmouseout = function() {
+    MyMar1 = setInterval(Marquee1, speed)
+}
+
+</script>
+</body>
+</html>
