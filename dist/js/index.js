@@ -6,6 +6,7 @@ window.onload = function () {
   var imgs = document.querySelectorAll('.content img');
   var btnTurn = document.querySelectorAll('.turn');
   var turnList = document.querySelector('.scroll-turn');
+  var navbar = document.querySelector('.navbar');
   var prev = document.getElementById('prev');
   var next = document.getElementById('next');
   var activeIndex = 0;
@@ -60,6 +61,8 @@ window.onload = function () {
     // ture false
     imgs[activeIndex].setAttribute('id', '');
     imgs[newIndex].setAttribute('id', 'visible');
+    btnTurn[activeIndex].setAttribute('id', '');
+    btnTurn[newIndex].setAttribute('id', 'turn-active');
     activeIndex = newIndex;
   };
 
@@ -79,12 +82,17 @@ window.onload = function () {
   };
 
   startScrollTimer();
+
   content.onmouseover = function () {
     stopScrollTimer();
   };
 
   content.onmouseout = function () {
     startScrollTimer();
+  };
+
+  navbar.onclick = function () {
+    stopScrollTimer();
   };
 };
 

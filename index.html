@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>scroll</title>
   <link rel="stylesheet" href="./dist/css/index.css" media="screen" title="no title">
 </head>
+
 <body>
-<div class="main">
-  <div class="container">
-    <div class="content">
+  <div class="main">
+    <div class="container">
+      <div class="content">
         <img src="./images/1.jpg" alt="1" id="visible" />
         <img src="./images/2.jpg" alt="2" />
         <img src="./images/3.jpg" alt="3" />
         <img src="./images/4.jpg" alt="4" />
         <img src="./images/5.jpg" alt="5" />
+        <div class="navbar">
+          <span id="prev"></span>
+          <span id="next"></span>
+        </div>
+      </div>
+    </div>
+
+    <ul class="scroll-turn">
+      <li class="turn" id="turn-active"></li>
+      <li class="turn"></li>
+      <li class="turn"></li>
+      <li class="turn"></li>
+      <li class="turn"></li>
+    </ul>
+
   </div>
-  <span id="prev"></span>
-  <span id="next"></span>
-  </div>
-  <ul class="scroll-turn">
-    <li class="turn"></li>
-    <li class="turn"></li>
-    <li class="turn"></li>
-    <li class="turn"></li>
-    <li class="turn"></li>
-  </ul>
-
-</div>
 
 
-<script src="./dist/js/index.js" charset="utf-8"></script>
+  <script src="./dist/js/index.js" charset="utf-8"></script>
 </body>
+
 </html>
