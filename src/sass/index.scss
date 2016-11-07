@@ -17,68 +17,62 @@ html {
 .content {
   width: 293px;
 
+  img {
+    display: none;
+    border-radius: 5px;
+  }
+
   .navbar {
     display: none;
   }
-}
 
-.content img {
-  display: none;
-  border-radius: 5px;
-}
-
-.content:hover {
-  .navbar {
-    display: block;
+  &:hover {
+    .navbar {
+      display: block;
+    }
   }
-}
 
-#visible {
-  display: inline-block;
+  #visible {
+    display: inline-block;
+  }
 }
 
 .scroll-turn {
   position: absolute;
   left: 45.5%;
   list-style: none;
-}
 
-.turn {
-  display: inline-block;
-  opacity: 0.8;
-  background: #1E90FF;
-  border: none;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-}
+  .turn {
+    display: inline-block;
+    opacity: 0.8;
+    background: #1E90FF;
+    border: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 
-#turn-active {
-  background: #00CED1;
-}
+  #turn-active {
+    background: #00CED1;
+  }
 
-.turn:hover {
-  background: #00CED1;
+  .turn:hover {
+    background: #00CED1;
+  }
 }
 
 #prev {
   position: absolute;
-  top: 83px;
-  left: 665px;
+  top: 88px;
+  left: 604px;
   background: url("../../images/prev.png") no-repeat;
-}
-
-#next:hover,
-#prev:hover {
-  background-color: grey;
-  opacity: 0.8;
 }
 
 #next {
   position: absolute;
-  top: 83px;
-  left: 926px;
+  top: 88px;
+  left: 867px;
   background: url("../../images/next.png") no-repeat;
 }
 
@@ -88,4 +82,9 @@ html {
   cursor: pointer;
   width: 2%;
   height: 20%;
+
+  &:hover {
+    background-color: grey;
+    opacity: 0.8;
+  }
 }
